@@ -1,0 +1,629 @@
+{
+  "name": "mm_fin_reservation",
+  "title": "fin_reservation ",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mm_fin_reservations",
+      "x-ms-dataverse-primary-id": "mm_fin_reservationid",
+      "x-ms-dataverse-primary-name": "mm_fin_name",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Créé par",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-dataverse-navigation-properties": [
+            "createdby"
+          ],
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-dataverse-attribute-of": "createdby",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-dataverse-attribute-of": "createdby",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Créé le",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Créé par (délégué)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-dataverse-navigation-properties": [
+            "createdonbehalfby"
+          ],
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-dataverse-attribute-of": "createdonbehalfby",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-dataverse-attribute-of": "createdonbehalfby",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Numéro séquentiel d’importation",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "mm_fin_commentaireachats": {
+          "type": "string",
+          "title": "fin_commentaireachats",
+          "x-ms-dataverse-attribute": "mm_fin_commentaireachats",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_commentaireachats",
+          "maxLength": 1000
+        },
+        "mm_fin_datereservation": {
+          "type": "string",
+          "title": "fin_datereservation",
+          "x-ms-dataverse-attribute": "mm_fin_datereservation",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mm_fin_datereservation",
+          "required": true
+        },
+        "mm_fin_demande": {
+          "type": "string",
+          "title": "fin_demande",
+          "x-ms-dataverse-attribute": "mm_fin_demande",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mm_fin_demande",
+          "x-ms-dataverse-navigation-properties": [
+            "mm_fin_demande"
+          ],
+          "required": true
+        },
+        "mm_fin_demandename": {
+          "type": "string",
+          "title": "mm_fin_demandename",
+          "x-ms-dataverse-attribute": "mm_fin_demandename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_demandeName",
+          "x-ms-dataverse-attribute-of": "mm_fin_demande",
+          "x-ms-read-only": true,
+          "maxLength": 850
+        },
+        "mm_fin_email": {
+          "type": "string",
+          "title": "fin_email",
+          "x-ms-dataverse-attribute": "mm_fin_email",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_email",
+          "maxLength": 100
+        },
+        "mm_fin_heurereservation": {
+          "type": "string",
+          "title": "fin_heurereservation",
+          "x-ms-dataverse-attribute": "mm_fin_heurereservation",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_heurereservation",
+          "required": true,
+          "maxLength": 5
+        },
+        "mm_fin_listeinvites": {
+          "type": "string",
+          "title": "fin_listeinvites",
+          "x-ms-dataverse-attribute": "mm_fin_listeinvites",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_listeinvites",
+          "required": true,
+          "maxLength": 100
+        },
+        "mm_fin_name": {
+          "type": "string",
+          "title": "fin_name ",
+          "x-ms-dataverse-attribute": "mm_fin_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 850
+        },
+        "mm_fin_nombreinvites": {
+          "type": "string",
+          "title": "fin_nombreinvites",
+          "x-ms-dataverse-attribute": "mm_fin_nombreinvites",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mm_fin_nombreinvites",
+          "required": true
+        },
+        "mm_fin_nomprenom": {
+          "type": "string",
+          "title": "fin_nomprenom",
+          "x-ms-dataverse-attribute": "mm_fin_nomprenom",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_nomprenom",
+          "maxLength": 100
+        },
+        "mm_fin_objetautre": {
+          "type": "string",
+          "title": "fin_objetautre",
+          "x-ms-dataverse-attribute": "mm_fin_objetautre",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_objetautre",
+          "maxLength": 100
+        },
+        "mm_fin_objetreservation": {
+          "type": "string",
+          "title": "fin_objetreservation",
+          "x-ms-dataverse-attribute": "mm_fin_objetreservation",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mm_fin_objetreservation",
+          "required": true,
+          "enum": [
+            "Invitation client",
+            "Invitation partenaire",
+            "Invitation fournisseur",
+            "Réunion d'affaires",
+            "Repas d'équipe",
+            "Événement professionnel",
+            "Formation interne",
+            "Formation externe",
+            "Autre"
+          ],
+          "x-ms-enum-values": [
+            124640000,
+            124640001,
+            124640002,
+            124640003,
+            124640004,
+            124640005,
+            124640006,
+            124640007,
+            124640008
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c8e34957-93c8-f111-aaaf-7c1e52367fa7",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "fin_objetreservation",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mm_fin_objetreservationname": {
+          "type": "string",
+          "title": "mm_fin_objetreservationname",
+          "x-ms-dataverse-attribute": "mm_fin_objetreservationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mm_fin_objetreservationName",
+          "x-ms-dataverse-attribute-of": "mm_fin_objetreservation",
+          "x-ms-read-only": true
+        },
+        "mm_fin_remarque": {
+          "type": "string",
+          "title": "fin_remarque",
+          "x-ms-dataverse-attribute": "mm_fin_remarque",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_remarque",
+          "maxLength": 1000
+        },
+        "mm_fin_reponsedemandeur": {
+          "type": "string",
+          "title": "fin_reponsedemandeur",
+          "x-ms-dataverse-attribute": "mm_fin_reponsedemandeur",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mm_fin_reponsedemandeur",
+          "enum": [
+            "Non",
+            "Oui"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "415c23db-99c8-f111-aaaf-7c1e52367fa7",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "fin_reponsedemandeur",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mm_fin_reponsedemandeurname": {
+          "type": "string",
+          "title": "mm_fin_reponsedemandeurname",
+          "x-ms-dataverse-attribute": "mm_fin_reponsedemandeurname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mm_fin_reponsedemandeurName",
+          "x-ms-dataverse-attribute-of": "mm_fin_reponsedemandeur",
+          "x-ms-read-only": true
+        },
+        "mm_fin_reservationid": {
+          "type": "string",
+          "title": "fin_reservation ",
+          "x-ms-dataverse-attribute": "mm_fin_reservationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mm_fin_reservationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mm_fin_restaurant": {
+          "type": "string",
+          "title": "fin_restaurant",
+          "x-ms-dataverse-attribute": "mm_fin_restaurant",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_restaurant",
+          "maxLength": 200
+        },
+        "mm_fin_restaurantpropose": {
+          "type": "string",
+          "title": "fin_restaurantpropose",
+          "x-ms-dataverse-attribute": "mm_fin_restaurantpropose",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_restaurantpropose",
+          "maxLength": 150
+        },
+        "mm_fin_typerepas": {
+          "type": "string",
+          "title": "fin_typerepas",
+          "x-ms-dataverse-attribute": "mm_fin_typerepas",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mm_fin_typerepas",
+          "required": true,
+          "enum": [
+            "Petit-déjeuner",
+            "Déjeuner · Dîner",
+            "Dîner",
+            "Ftour du Ramadan"
+          ],
+          "x-ms-enum-values": [
+            124640000,
+            124640001,
+            124640002,
+            124640003
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "0ab30b64-92c8-f111-a059-e4fb1ef818e8",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "fin_typerepas",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mm_fin_typerepasname": {
+          "type": "string",
+          "title": "mm_fin_typerepasname",
+          "x-ms-dataverse-attribute": "mm_fin_typerepasname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mm_fin_typerepasName",
+          "x-ms-dataverse-attribute-of": "mm_fin_typerepas",
+          "x-ms-read-only": true
+        },
+        "mm_fin_ville": {
+          "type": "string",
+          "title": "fin_ville",
+          "x-ms-dataverse-attribute": "mm_fin_ville",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mm_fin_ville",
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modifié par",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-dataverse-navigation-properties": [
+            "modifiedby"
+          ],
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-dataverse-attribute-of": "modifiedby",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-dataverse-attribute-of": "modifiedby",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modifié le",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modifié par (délégué)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-dataverse-navigation-properties": [
+            "modifiedonbehalfby"
+          ],
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-dataverse-attribute-of": "modifiedonbehalfby",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-dataverse-attribute-of": "modifiedonbehalfby",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Enregistrement créé le",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Propriétaire",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-dataverse-attribute-of": "ownerid",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-dataverse-attribute-of": "ownerid",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-dataverse-attribute-of": "ownerid",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Division propriétaire",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-dataverse-navigation-properties": [
+            "owningbusinessunit"
+          ],
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-dataverse-attribute-of": "owningbusinessunit",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Équipe propriétaire",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-dataverse-navigation-properties": [
+            "owningteam"
+          ],
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Utilisateur propriétaire",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-dataverse-navigation-properties": [
+            "owninguser"
+          ],
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Statut",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Actif",
+            "Inactif"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "1edc8646-7de6-4392-b0ca-d25196fe4d98",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Statut",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-dataverse-attribute-of": "statecode",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Raison du statut",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Actif",
+            "Inactif"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c77144d5-15c2-4a43-b079-c7fdae09e52a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Raison du statut",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-dataverse-attribute-of": "statuscode",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Numéro de version de la règle du fuseau horaire",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "Code de fuseau horaire pour la conversion UTC",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Numéro de version",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "mm_fin_datereservation",
+        "mm_fin_demande",
+        "mm_fin_heurereservation",
+        "mm_fin_listeinvites",
+        "mm_fin_nombreinvites",
+        "mm_fin_objetreservation",
+        "mm_fin_reservationid",
+        "mm_fin_typerepas",
+        "mm_fin_ville",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningbusinessunitname",
+        "statecode"
+      ]
+    }
+  }
+}

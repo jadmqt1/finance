@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "appId": "26da4ef7-1bf8-4255-8796-a720c2b01259",
+  "appDisplayName": "Gestion Fincance",
+  "region": "prod",
+  "appType": "CodeApp",
+  "environmentId": "7f992817-032f-e9a0-ba62-4fb471989a40",
+  "description": " ",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {},
+  "databaseReferences": {
+    "default.cds": {
+      "dataSources": {
+        "fin_demande": {
+          "entitySetName": "mm_fin_demandes",
+          "logicalName": "mm_fin_demande",
+          "isHidden": false
+        },
+        "fin_reservation": {
+          "entitySetName": "mm_fin_reservations",
+          "logicalName": "mm_fin_reservation",
+          "isHidden": false
+        }
+      },
+      "environmentVariableName": ""
+    }
+  }
+}

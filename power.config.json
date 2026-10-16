@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "appId": "*******",
+  "appDisplayName": "test finance",
+  "region": "prod",
+  "environmentId": "*****",
+  "description": " ",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {},
+  "databaseReferences": {
+    "default.cds": {
+      "dataSources": {
+        "fin_demande": {
+          "entitySetName": "mm_fin_demandes",
+          "logicalName": "mm_fin_demande",
+          "isHidden": false
+        },
+        "fin_reservation": {
+          "entitySetName": "mm_fin_reservations",
+          "logicalName": "mm_fin_reservation",
+          "isHidden": false
+        }
+      },
+      "environmentVariableName": ""
+    }
+  }
+}
